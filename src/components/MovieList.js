@@ -1,18 +1,21 @@
 import Movie from './Movie';
 
-
-
 export default function MovieList(props) {
+
+    
+
 
     return (
         <>
-            <h1>The List Of Movies </h1>
+      
+            <h2>The List Of Movies </h2>
 
             {
                 props.movies.map(each => {
+                    
                     return (
                         <>
-                            <Movie movie={each} />
+                            <Movie movie={each}  updateMovies={props.updateMovies} />
                         </>
                     )
                 })}
